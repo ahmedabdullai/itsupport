@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT Support MK — Professional IT services in Macedonia. Computer repair, software development, network setup, cloud services & IT consulting for businesses and individuals.">
+  <meta name="keywords" content="IT support, computer repair, software development, network setup, cloud services, IT consulting, Macedonia, Skopje">
+  <meta property="og:title" content="IT Support MK — Professional IT Services">
+  <meta property="og:description" content="Your trusted technology partner in Macedonia. From computer repair to full cloud solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itsupport.mk">
+  <title>IT Support MK — Professional IT Services | itsupport.mk</title>
+  <link rel="canonical" href="https://itsupport.mk">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="IT Support MK Home">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+      <div class="logo-text">IT<span>Support</span>.mk</div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="has-dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown" role="menu">
+          <a href="services.html#repair" role="menuitem"><span class="dd-icon">🔧</span> Computer Repair</a>
+          <a href="services.html#software" role="menuitem"><span class="dd-icon">💻</span> Software Development</a>
+          <a href="services.html#network" role="menuitem"><span class="dd-icon">🌐</span> Network & Security</a>
+          <a href="services.html#cloud" role="menuitem"><span class="dd-icon">☁️</span> Cloud Services</a>
+          <a href="services.html#consulting" role="menuitem"><span class="dd-icon">📊</span> IT Consulting</a>
+        </div>
+      </li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+    <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════ -->
+<header class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-dot" aria-hidden="true"></div>
+        <span>Trusted IT Partner in Macedonia</span>
+      </div>
+      <h1>
+        Technology That<br>
+        <span class="line2">Works For You</span>
+      </h1>
+      <p>Complete IT solutions for businesses and individuals — from on-site computer repair to enterprise cloud infrastructure. Fast, reliable, and always professional.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote →</a>
+        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" role="list" aria-label="Company statistics">
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="500" data-suffix="+">500+</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="10" data-suffix="+ yrs">10+ yrs</span>
+        <span class="stat-label">Experience</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="98" data-suffix="%">98%</span>
+        <span class="stat-label">Satisfaction Rate</span>
+      </div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="4" data-suffix="h">4h</span>
+        <span class="stat-label">Avg. Response Time</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     SERVICES SECTION
+════════════════════════════════════════ -->
+<section class="section" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="badge">What We Do</div>
+    <h2 class="section-heading" id="services-heading">End-to-End <span>IT Services</span></h2>
+    <p class="section-sub">From fixing a single machine to building your entire digital infrastructure — we've got every angle covered.</p>
+
+    <div class="services-grid">
+
+      <article class="card" aria-label="Computer Repair & Maintenance">
+        <div class="service-icon icon-blue" aria-hidden="true">🔧</div>
+        <h3>Computer Repair & Maintenance</h3>
+        <p>Hardware diagnostics, virus removal, OS reinstallation, data recovery, and preventive maintenance to keep your systems running at peak performance.</p>
+        <a href="services.html#repair" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card" aria-label="Software Development">
+        <div class="service-icon icon-cyan" aria-hidden="true">💻</div>
+        <h3>Software Development</h3>
+        <p>Custom web apps, business automation tools, ERP/CRM integration, and desktop applications tailored precisely to your workflows and requirements.</p>
+        <a href="services.html#software" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card" aria-label="Network Setup & Security">
+        <div class="service-icon icon-green" aria-hidden="true">🌐</div>
+        <h3>Network Setup & Security</h3>
+        <p>Office network design, Wi-Fi optimisation, firewall configuration, VPN setup, and 24/7 security monitoring to protect your data and operations.</p>
+        <a href="services.html#network" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card" aria-label="Cloud Services & Backup">
+        <div class="service-icon icon-purple" aria-hidden="true">☁️</div>
+        <h3>Cloud Services & Backup</h3>
+        <p>Microsoft 365, Google Workspace, AWS/Azure setup, automated cloud backups, and disaster recovery plans so your business never loses critical data.</p>
+        <a href="services.html#cloud" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card" aria-label="IT Consulting">
+        <div class="service-icon icon-orange" aria-hidden="true">📊</div>
+        <h3>IT Consulting</h3>
+        <p>Strategic technology roadmaps, digital transformation guidance, IT audits, vendor selection, and budgeting — helping you make smarter tech investments.</p>
+        <a href="services.html#consulting" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card" aria-label="Remote Support">
+        <div class="service-icon icon-blue" aria-hidden="true">🖥️</div>
+        <h3>Remote Support</h3>
+        <p>Instant remote assistance for software issues, user support, and system configuration — no matter where your team is located. Available same-day.</p>
+        <a href="contact.html" class="card-link">Get support →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY US SECTION
+════════════════════════════════════════ -->
+<section class="section section--alt" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="badge">Why Choose Us</div>
+        <h2 class="section-heading" id="why-heading">Your Technology,<br><span>Our Priority</span></h2>
+        <p class="section-sub" style="margin-bottom:0;">We combine deep technical expertise with a people-first approach, so you always feel supported — not overwhelmed.</p>
+
+        <div class="why-features">
+          <div class="feature-item">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <div class="feature-content">
+              <h4>Fast Response Times</h4>
+              <p>Critical issues are addressed within 4 hours on business days. Remote sessions can start within minutes.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon" aria-hidden="true">🔐</div>
+            <div class="feature-content">
+              <h4>Security-First Mindset</h4>
+              <p>Every solution we implement follows modern security best practices. Your data protection is non-negotiable.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon" aria-hidden="true">💬</div>
+            <div class="feature-content">
+              <h4>Plain-Language Communication</h4>
+              <p>No jargon, no confusion. We explain everything in clear, simple terms so you stay in control.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <div class="feature-content">
+              <h4>Scalable Solutions</h4>
+              <p>Whether you're a solo professional or a growing company, our services scale with your needs and budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual" aria-hidden="true">
+        <div class="visual-card">
+          <div class="big-num">10+</div>
+          <p>Years delivering reliable IT solutions across Macedonia</p>
+        </div>
+        <div class="floating-badge">
+          <span class="fb-icon">✅</span>
+          <div class="fb-text"><span>500+ Clients</span>Served & Satisfied</div>
+        </div>
+        <div class="floating-badge">
+          <span class="fb-icon">🔒</span>
+          <div class="fb-text"><span>ISO Compliant</span>Security Standards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="badge">Client Stories</div>
+    <h2 class="section-heading" id="testimonials-heading">What Our <span>Clients Say</span></h2>
+    <p class="section-sub">Trusted by businesses of all sizes across Macedonia.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-text">"IT Support MK completely transformed our office infrastructure. Our network is faster, more secure, and the team explained every step. Best IT investment we've made."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">AM</div>
+          <div>
+            <div class="t-name">Aleksandar Milošević</div>
+            <div class="t-role">CEO, Milošević & Partners Law Firm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-text">"They recovered data we thought was gone forever after a hard drive crash, then set up automated cloud backup. Professional, fast, and fairly priced. Highly recommend."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">TP</div>
+          <div>
+            <div class="t-name">Teodora Petrovska</div>
+            <div class="t-role">Owner, Boutique Café Teo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-text">"We hired them to develop a custom inventory management system for our warehouse. Delivered on time, within budget, and they trained our whole team. Outstanding service."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">BJ</div>
+          <div>
+            <div class="t-name">Bojan Jovanov</div>
+            <div class="t-role">Operations Manager, LogistiX DOOEL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════ -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 id="cta-heading">Ready to Solve Your IT Problems?</h2>
+    <p>Talk to our experts today — no obligation, no jargon, just real solutions.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn" style="background:white;color:var(--navy);font-weight:700;">Get a Free Consultation</a>
+      <a href="tel:+38971000000" class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:white;">📞 +389 71 000 000</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div class="logo-text">IT<span>Support</span>.mk</div>
+        </a>
+        <p>Your trusted technology partner in Macedonia. Reliable IT services for businesses and individuals since 2015.</p>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#repair">Computer Repair</a></li>
+          <li><a href="services.html#software">Software Development</a></li>
+          <li><a href="services.html#network">Network & Security</a></li>
+          <li><a href="services.html#cloud">Cloud Services</a></li>
+          <li><a href="services.html#consulting">IT Consulting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <div class="fc-item">
+          <span class="fc-icon">📍</span>
+          <span class="fc-text">Ul. Partizanska 12, 1000 Skopje, North Macedonia</span>
+        </div>
+        <div class="fc-item">
+          <span class="fc-icon">📞</span>
+          <span class="fc-text"><a href="tel:+38971000000">+389 71 000 000</a></span>
+        </div>
+        <div class="fc-item">
+          <span class="fc-icon">✉️</span>
+          <span class="fc-text"><a href="mailto:info@itsupport.mk">info@itsupport.mk</a></span>
+        </div>
+        <div class="fc-item">
+          <span class="fc-icon">🕐</span>
+          <span class="fc-text">Mon – Fri: 08:00 – 18:00<br>Sat: 09:00 – 14:00</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 IT Support MK. All rights reserved.</p>
+      <div style="display:flex;gap:20px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

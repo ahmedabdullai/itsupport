@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Transparent IT service pricing for individuals and businesses in Macedonia. Monthly support plans, development rates, and custom enterprise packages.">
+  <title>Pricing & Packages — IT Support MK</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .billing-toggle { display:flex; align-items:center; gap:16px; justify-content:center; margin-bottom:48px; }
+    .billing-label { font-weight:600; color:var(--gray); transition:color .2s; }
+    .billing-label.active { color:var(--white); }
+    .toggle-switch { position:relative; width:54px; height:28px; }
+    .toggle-switch input { opacity:0; width:0; height:0; }
+    .toggle-slider { position:absolute; inset:0; background:var(--blue); border-radius:100px; cursor:pointer; transition:.3s; }
+    .toggle-slider::before { content:''; position:absolute; height:20px; width:20px; left:4px; bottom:4px; background:white; border-radius:50%; transition:.3s; }
+    .toggle-switch input:checked + .toggle-slider::before { transform:translateX(26px); }
+    .save-badge { background:rgba(16,185,129,.15); color:var(--green); border:1px solid rgba(16,185,129,.3); font-size:.75rem; font-weight:700; padding:3px 10px; border-radius:100px; }
+    .addon-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:0; }
+    .addon-card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:24px; display:flex; gap:16px; align-items:flex-start; }
+    .addon-icon { font-size:1.8rem; flex-shrink:0; }
+    .addon-content h4 { font-family:'Sora',sans-serif; font-weight:700; margin-bottom:4px; }
+    .addon-content p { color:var(--gray); font-size:.88rem; }
+    .addon-price { color:var(--cyan); font-weight:700; margin-top:8px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li class="has-dropdown"><a href="services.html">Services ▾</a><div class="dropdown"><a href="services.html#repair"><span class="dd-icon">🔧</span> Computer Repair</a><a href="services.html#software"><span class="dd-icon">💻</span> Software Development</a><a href="services.html#network"><span class="dd-icon">🌐</span> Network & Security</a><a href="services.html#cloud"><span class="dd-icon">☁️</span> Cloud Services</a><a href="services.html#consulting"><span class="dd-icon">📊</span> IT Consulting</a></div></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="badge">Transparent Pricing</div>
+    <h1>Simple Plans, <span style="color:var(--cyan);">No Surprises</span></h1>
+    <p>Straightforward pricing for ongoing IT support. All plans include free phone consultations and a 30-day satisfaction guarantee.</p>
+  </div>
+</section>
+
+<!-- Monthly Support Plans -->
+<section class="section">
+  <div class="container">
+    <div class="badge">Monthly Support Plans</div>
+    <h2 class="section-heading" style="text-align:center;">IT Support <span>Packages</span></h2>
+    <p class="section-sub" style="text-align:center;margin-left:auto;margin-right:auto;">For businesses that need reliable, ongoing IT support — choose the level that fits your team size and needs.</p>
+
+    <div class="billing-toggle">
+      <span class="billing-label active" id="lbl-monthly">Monthly</span>
+      <label class="toggle-switch" aria-label="Toggle billing period">
+        <input type="checkbox" id="billingToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="billing-label" id="lbl-annual">Annual <span class="save-badge">Save 20%</span></span>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Starter -->
+      <div class="pricing-card">
+        <div class="price-name">🚀 Starter</div>
+        <div class="price-amount">
+          <span class="currency">€</span>
+          <span class="amount" data-monthly="49" data-annual="39">49</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="price-desc">Perfect for freelancers, home offices & very small teams (1–3 devices).</p>
+        <div class="price-features">
+          <div class="price-feature"><span class="check">✓</span> Up to 3 devices managed</div>
+          <div class="price-feature"><span class="check">✓</span> Remote support (4h response)</div>
+          <div class="price-feature"><span class="check">✓</span> Monthly health check</div>
+          <div class="price-feature"><span class="check">✓</span> Antivirus management</div>
+          <div class="price-feature"><span class="check">✓</span> Software updates</div>
+          <div class="price-feature"><span class="cross">✗</span> On-site visits</div>
+          <div class="price-feature"><span class="cross">✗</span> Dedicated account manager</div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+
+      <!-- Business (Featured) -->
+      <div class="pricing-card featured">
+        <div class="price-name">💼 Business</div>
+        <div class="price-amount">
+          <span class="currency">€</span>
+          <span class="amount" data-monthly="149" data-annual="119">149</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="price-desc">Ideal for small to medium businesses (5–20 devices).</p>
+        <div class="price-features">
+          <div class="price-feature"><span class="check">✓</span> Up to 20 devices managed</div>
+          <div class="price-feature"><span class="check">✓</span> Remote support (2h response)</div>
+          <div class="price-feature"><span class="check">✓</span> 2 on-site visits per month</div>
+          <div class="price-feature"><span class="check">✓</span> 24/7 network monitoring</div>
+          <div class="price-feature"><span class="check">✓</span> Cloud backup (100GB)</div>
+          <div class="price-feature"><span class="check">✓</span> Microsoft 365 support</div>
+          <div class="price-feature"><span class="check">✓</span> Quarterly IT review</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pricing-card">
+        <div class="price-name">🏢 Enterprise</div>
+        <div class="price-amount">
+          <span class="currency">€</span>
+          <span class="amount" data-monthly="349" data-annual="279">349</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="price-desc">For larger organisations that need comprehensive managed IT.</p>
+        <div class="price-features">
+          <div class="price-feature"><span class="check">✓</span> Unlimited devices managed</div>
+          <div class="price-feature"><span class="check">✓</span> Priority response (&lt;1h)</div>
+          <div class="price-feature"><span class="check">✓</span> Unlimited on-site visits</div>
+          <div class="price-feature"><span class="check">✓</span> 24/7 security monitoring</div>
+          <div class="price-feature"><span class="check">✓</span> Cloud backup (1TB)</div>
+          <div class="price-feature"><span class="check">✓</span> Dedicated account manager</div>
+          <div class="price-feature"><span class="check">✓</span> Monthly strategy meeting</div>
+        </div>
+        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Contact Sales</a>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--gray);margin-top:28px;font-size:.9rem;">All prices exclude VAT. Custom enterprise quotes available. <a href="contact.html" style="color:var(--cyan);">Contact us</a> for multi-location or non-profit pricing.</p>
+  </div>
+</section>
+
+<!-- One-Time Services -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="badge">One-Time Services</div>
+    <h2 class="section-heading" style="text-align:center;">Pay As You <span>Need</span></h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 48px;">No subscription required for these services — clear, upfront pricing.</p>
+
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="background:rgba(26,86,219,.15);">
+              <th style="padding:18px 24px;text-align:left;font-family:'Sora',sans-serif;font-size:.9rem;">Service</th>
+              <th style="padding:18px 24px;text-align:right;font-family:'Sora',sans-serif;font-size:.9rem;">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>Computer Repair (basic)</strong><br><span style="color:var(--gray);font-size:.85rem;">Diagnosis + fix, parts extra</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">from €29</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>Virus / Malware Removal</strong><br><span style="color:var(--gray);font-size:.85rem;">Including cleanup and hardening</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">from €39</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>OS Reinstallation</strong><br><span style="color:var(--gray);font-size:.85rem;">Windows/macOS, data backed up first</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">€49</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>Data Recovery</strong><br><span style="color:var(--gray);font-size:.85rem;">Logical failure; physical extra</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">from €79</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>Network Setup (small office)</strong><br><span style="color:var(--gray);font-size:.85rem;">Up to 10 devices, router + switch + Wi-Fi</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">from €199</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>Microsoft 365 Setup & Migration</strong><br><span style="color:var(--gray);font-size:.85rem;">Per user, up to 10 users</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">€25/user</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,.06);">
+              <td style="padding:16px 24px;"><strong>IT Consulting (hourly)</strong><br><span style="color:var(--gray);font-size:.85rem;">Strategic advice & planning</span></td>
+              <td style="padding:16px 24px;text-align:right;color:var(--cyan);font-weight:700;">€75/hr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add-ons -->
+<section class="section">
+  <div class="container">
+    <div class="badge">Add-On Services</div>
+    <h2 class="section-heading" style="text-align:center;">Enhance Your <span>Plan</span></h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 48px;">Available as add-ons to any monthly support package.</p>
+    <div class="addon-grid">
+      <div class="addon-card"><div class="addon-icon">☁️</div><div class="addon-content"><h4>Extended Cloud Backup</h4><p>Additional 500GB automated backup storage</p><div class="addon-price">+ €19/month</div></div></div>
+      <div class="addon-card"><div class="addon-icon">🛡️</div><div class="addon-content"><h4>Advanced Security Suite</h4><p>EDR, SIEM monitoring & monthly security report</p><div class="addon-price">+ €39/month</div></div></div>
+      <div class="addon-card"><div class="addon-icon">📞</div><div class="addon-content"><h4>After-Hours Support</h4><p>Emergency support 18:00–22:00 & weekends</p><div class="addon-price">+ €49/month</div></div></div>
+      <div class="addon-card"><div class="addon-icon">📊</div><div class="addon-content"><h4>Monthly IT Report</h4><p>Detailed infrastructure & security health report</p><div class="addon-price">+ €29/month</div></div></div>
+      <div class="addon-card"><div class="addon-icon">📱</div><div class="addon-content"><h4>Mobile Device Management</h4><p>iOS & Android device management & security</p><div class="addon-price">+ €5/device</div></div></div>
+      <div class="addon-card"><div class="addon-icon">🎓</div><div class="addon-content"><h4>Staff IT Training</h4><p>Monthly cybersecurity awareness training sessions</p><div class="addon-price">+ €49/month</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>Need a Custom Quote?</h2>
+    <p>Large enterprise? Multiple locations? We'll build a package specifically for your needs.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn" style="background:white;color:var(--navy);font-weight:700;">Request Custom Quote</a>
+      <a href="faq.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:white;">Read FAQ</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a><p>Your trusted technology partner in Macedonia since 2015.</p><div class="socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a></div></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#repair">Computer Repair</a></li><li><a href="services.html#software">Software Dev</a></li><li><a href="services.html#network">Network & Security</a></li><li><a href="services.html#cloud">Cloud Services</a></li><li><a href="services.html#consulting">IT Consulting</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col footer-contact"><h4>Contact</h4><div class="fc-item"><span class="fc-icon">📞</span><span class="fc-text"><a href="tel:+38971000000">+389 71 000 000</a></span></div><div class="fc-item"><span class="fc-icon">✉️</span><span class="fc-text"><a href="mailto:info@itsupport.mk">info@itsupport.mk</a></span></div></div></div><div class="footer-bottom"><p>© 2025 IT Support MK. All rights reserved.</p></div></div></footer>
+<button class="back-top">↑</button>
+<script src="script.js"></script>
+<script>
+  // Billing toggle
+  const toggle = document.getElementById('billingToggle');
+  const lblMonthly = document.getElementById('lbl-monthly');
+  const lblAnnual = document.getElementById('lbl-annual');
+  toggle?.addEventListener('change', () => {
+    const isAnnual = toggle.checked;
+    lblMonthly.classList.toggle('active', !isAnnual);
+    lblAnnual.classList.toggle('active', isAnnual);
+    document.querySelectorAll('.amount[data-monthly]').forEach(el => {
+      el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
+    });
+  });
+</script>
+</body>
+</html>

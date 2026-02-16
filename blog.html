@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT Support MK Blog — practical guides, tips, and news on cybersecurity, cloud computing, software development, and IT best practices for businesses in Macedonia.">
+  <title>Blog & Knowledge Base — IT Support MK</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-hero-post {
+      background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: 20px;
+      overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      margin-bottom: 56px; transition: all var(--transition);
+    }
+    .blog-hero-post:hover { border-color: rgba(6,182,212,.25); }
+    .blog-hero-thumb {
+      background: linear-gradient(135deg, var(--navy2) 0%, var(--card2) 100%);
+      display: flex; align-items: center; justify-content: center; font-size: 6rem;
+      min-height: 360px;
+    }
+    .blog-hero-body { padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+    .blog-hero-body h2 { font-family:'Sora',sans-serif; font-size:1.8rem; font-weight:800; margin-bottom:14px; line-height:1.3; }
+    .blog-hero-body p { color:var(--gray); line-height:1.75; margin-bottom:24px; }
+    .blog-meta { display:flex; gap:16px; color:var(--gray); font-size:.85rem; margin-bottom:14px; }
+    .blog-author { display:flex; align-items:center; gap:8px; }
+    .author-avatar { width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--cyan)); display:flex; align-items:center; justify-content:center; font-size:.7rem; font-weight:700; }
+    .categories { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:40px; }
+    .cat-btn { padding:8px 18px; border-radius:100px; font-size:.85rem; font-weight:600; border:1px solid rgba(255,255,255,.12); background:transparent; color:var(--gray); transition:all var(--transition); }
+    .cat-btn:hover, .cat-btn.active { background:var(--blue); border-color:var(--blue); color:white; }
+    @media(max-width:768px){ .blog-hero-post{grid-template-columns:1fr;} .blog-hero-thumb{min-height:200px;} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li class="has-dropdown"><a href="services.html">Services ▾</a><div class="dropdown"><a href="services.html#repair"><span class="dd-icon">🔧</span> Computer Repair</a><a href="services.html#software"><span class="dd-icon">💻</span> Software Development</a><a href="services.html#network"><span class="dd-icon">🌐</span> Network & Security</a><a href="services.html#cloud"><span class="dd-icon">☁️</span> Cloud Services</a><a href="services.html#consulting"><span class="dd-icon">📊</span> IT Consulting</a></div></li>
+      <li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="badge">Knowledge Base & Blog</div>
+    <h1>IT Insights for <span style="color:var(--cyan);">Your Business</span></h1>
+    <p>Practical guides, cybersecurity tips, and technology news — written in plain language for business owners and teams.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Featured Post -->
+    <div class="blog-hero-post">
+      <div class="blog-hero-thumb" aria-hidden="true">🔐</div>
+      <div class="blog-hero-body">
+        <span class="blog-tag">🔥 Featured</span>
+        <div class="blog-meta">
+          <div class="blog-author"><div class="author-avatar">MK</div><span>Marko Kostovski</span></div>
+          <span>•</span><span>February 10, 2025</span><span>•</span><span>8 min read</span>
+        </div>
+        <h2>The 10 Cybersecurity Mistakes Small Businesses in Macedonia Are Still Making in 2025</h2>
+        <p>Ransomware, phishing, and data breaches are no longer just threats for large corporations. Here's how to protect your business without a dedicated security team or enterprise budget.</p>
+        <a href="#" class="btn btn-primary">Read Article →</a>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="categories" role="group" aria-label="Filter by category">
+      <button class="cat-btn active">All</button>
+      <button class="cat-btn">🔐 Cybersecurity</button>
+      <button class="cat-btn">☁️ Cloud</button>
+      <button class="cat-btn">💻 Software</button>
+      <button class="cat-btn">🌐 Networking</button>
+      <button class="cat-btn">📊 IT Strategy</button>
+      <button class="cat-btn">🔧 How-To</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">☁️</div>
+        <div class="blog-body">
+          <span class="blog-tag">Cloud</span>
+          <div class="blog-date">January 28, 2025</div>
+          <h3>Microsoft 365 vs Google Workspace: Which Is Right for Your Business in 2025?</h3>
+          <p>A practical, no-hype comparison of the two biggest cloud productivity platforms — from pricing to collaboration features.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">🌐</div>
+        <div class="blog-body">
+          <span class="blog-tag">Networking</span>
+          <div class="blog-date">January 15, 2025</div>
+          <h3>Why Your Office Wi-Fi Is Probably Putting You at Risk — and How to Fix It</h3>
+          <p>Weak passwords, outdated firmware, guest network access — the common Wi-Fi mistakes that leave business networks exposed.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">💾</div>
+        <div class="blog-body">
+          <span class="blog-tag">🔧 How-To</span>
+          <div class="blog-date">December 20, 2024</div>
+          <h3>The 3-2-1 Backup Rule: How to Never Lose Business Data Again</h3>
+          <p>If you're not following this simple rule, one hardware failure or ransomware attack could cost you everything. Here's how to implement it.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">🤖</div>
+        <div class="blog-body">
+          <span class="blog-tag">IT Strategy</span>
+          <div class="blog-date">December 5, 2024</div>
+          <h3>How Macedonian SMEs Can Actually Use AI Tools to Save Time and Money</h3>
+          <p>Beyond the hype — practical ways businesses are using AI tools like ChatGPT, Copilot, and automation platforms right now.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">🛡️</div>
+        <div class="blog-body">
+          <span class="blog-tag">Cybersecurity</span>
+          <div class="blog-date">November 18, 2024</div>
+          <h3>GDPR in North Macedonia: What Every Business Must Know in 2025</h3>
+          <p>A plain-English guide to data protection compliance — what you must do, what to avoid, and what the penalties look like for non-compliance.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true">💻</div>
+        <div class="blog-body">
+          <span class="blog-tag">Software</span>
+          <div class="blog-date">November 3, 2024</div>
+          <h3>Custom Software vs Off-the-Shelf: When Does Building Your Own Actually Make Sense?</h3>
+          <p>Not every business needs bespoke software — but sometimes it's the only way to work the way you actually want to. Here's how to decide.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Load More -->
+    <div style="text-align:center;margin-top:48px;">
+      <button class="btn btn-outline" onclick="this.textContent='No more posts to load.';this.disabled=true;">Load More Articles</button>
+    </div>
+
+    <!-- Newsletter -->
+    <div style="background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:48px;text-align:center;margin-top:72px;">
+      <div class="badge" style="justify-content:center;margin-bottom:16px;">Newsletter</div>
+      <h3 style="font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:12px;">Get IT Tips Straight to Your Inbox</h3>
+      <p style="color:var(--gray);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;">Monthly digest of cybersecurity alerts, useful guides, and practical IT advice for Macedonian businesses. No spam.</p>
+      <form style="display:flex;gap:12px;max-width:440px;margin:0 auto;" onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--green);font-weight:700;>✅ You\'re subscribed!</p>';">
+        <input type="email" placeholder="your@email.com" required style="flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:13px 16px;color:white;font-family:inherit;outline:none;">
+        <button type="submit" class="btn btn-cyan">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a><p>Your trusted technology partner in Macedonia since 2015.</p><div class="socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a></div></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#repair">Computer Repair</a></li><li><a href="services.html#software">Software Dev</a></li><li><a href="services.html#network">Network & Security</a></li><li><a href="services.html#cloud">Cloud Services</a></li><li><a href="services.html#consulting">IT Consulting</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col footer-contact"><h4>Contact</h4><div class="fc-item"><span class="fc-icon">📞</span><span class="fc-text"><a href="tel:+38971000000">+389 71 000 000</a></span></div><div class="fc-item"><span class="fc-icon">✉️</span><span class="fc-text"><a href="mailto:info@itsupport.mk">info@itsupport.mk</a></span></div></div></div><div class="footer-bottom"><p>© 2025 IT Support MK. All rights reserved.</p></div></div></footer>
+<button class="back-top">↑</button>
+<script src="script.js"></script>
+<script>
+  // Category filter buttons (visual only in static demo)
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

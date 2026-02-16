@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore IT Support MK's full range of IT services: computer repair, software development, network setup, cloud services & backup, and IT consulting in Macedonia.">
+  <title>Services — IT Support MK</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Service Tabs */
+    .tabs-nav {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 0;
+    }
+    .tab-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 8px 8px 0 0;
+      font-size: .93rem; font-weight: 600; color: var(--gray);
+      background: transparent; border: 1px solid transparent;
+      border-bottom: none; transition: all var(--transition);
+      margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--white); background: rgba(255,255,255,.04); }
+    .tab-btn.active {
+      color: var(--cyan); background: var(--card);
+      border-color: rgba(255,255,255,.08); border-bottom-color: var(--card);
+    }
+    .tab-pane { display: none; animation: fadeUp .35s ease; }
+    .tab-pane.active { display: block; }
+    .service-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .service-detail-content h2 { font-family:'Sora',sans-serif; font-size:2rem; font-weight:800; margin-bottom:16px; }
+    .service-detail-content p { color:var(--gray); line-height:1.8; margin-bottom:20px; }
+    .service-bullets { display:flex; flex-direction:column; gap:12px; margin-bottom:28px; }
+    .service-bullet { display:flex; align-items:center; gap:12px; font-size:.95rem; }
+    .service-bullet::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+    .service-visual { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:48px; text-align:center; }
+    .service-big-icon { font-size:5rem; margin-bottom:20px; }
+    .service-visual h3 { font-family:'Sora',sans-serif; font-size:1.3rem; font-weight:700; margin-bottom:10px; }
+    .service-visual p { color:var(--gray); font-size:.93rem; }
+    .process-steps { display:flex; flex-direction:column; gap:0; margin-top:48px; }
+    .process-step { display:flex; gap:20px; position:relative; padding-bottom:32px; }
+    .process-step:last-child { padding-bottom:0; }
+    .process-step::before { content:''; position:absolute; left:20px; top:44px; bottom:0; width:2px; background:rgba(255,255,255,.07); }
+    .process-step:last-child::before { display:none; }
+    .step-num { flex-shrink:0; width:42px; height:42px; border-radius:50%; background:var(--blue); display:flex; align-items:center; justify-content:center; font-family:'Sora',sans-serif; font-weight:700; font-size:.95rem; position:relative; z-index:1; }
+    .step-content h4 { font-family:'Sora',sans-serif; font-weight:700; margin-bottom:6px; padding-top:8px; }
+    .step-content p { color:var(--gray); font-size:.92rem; }
+    @media(max-width:768px){ .service-detail{grid-template-columns:1fr;} .tabs-nav{overflow-x:auto;} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li class="has-dropdown"><a href="services.html" class="active">Services ▾</a><div class="dropdown"><a href="#repair"><span class="dd-icon">🔧</span> Computer Repair</a><a href="#software"><span class="dd-icon">💻</span> Software Development</a><a href="#network"><span class="dd-icon">🌐</span> Network & Security</a><a href="#cloud"><span class="dd-icon">☁️</span> Cloud Services</a><a href="#consulting"><span class="dd-icon">📊</span> IT Consulting</a></div></li>
+      <li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="badge">Our Services</div>
+    <h1>Complete <span style="color:var(--cyan);">IT Solutions</span></h1>
+    <p>Five core service areas covering every technology need your business could have — all under one roof.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Tab Navigation -->
+    <nav class="tabs-nav" role="tablist" aria-label="Services">
+      <button class="tab-btn active" data-tab="repair" role="tab" aria-selected="true">🔧 Computer Repair</button>
+      <button class="tab-btn" data-tab="software" role="tab">💻 Software Dev</button>
+      <button class="tab-btn" data-tab="network" role="tab">🌐 Network & Security</button>
+      <button class="tab-btn" data-tab="cloud" role="tab">☁️ Cloud Services</button>
+      <button class="tab-btn" data-tab="consulting" role="tab">📊 IT Consulting</button>
+    </nav>
+
+    <!-- REPAIR -->
+    <div class="tab-pane active" id="repair" role="tabpanel">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <div class="badge">Service 01</div>
+          <h2>Computer Repair <span style="color:var(--cyan);">& Maintenance</span></h2>
+          <p>Whether your laptop won't turn on, your PC is running slow, or you've been hit by ransomware — our certified technicians diagnose and fix hardware and software problems fast, typically within 24–48 hours.</p>
+          <p>We also offer preventive maintenance packages that significantly reduce downtime by catching issues before they become crises.</p>
+          <div class="service-bullets">
+            <div class="service-bullet">Hardware diagnostics & component replacement (RAM, HDD/SSD, GPU, motherboard)</div>
+            <div class="service-bullet">Virus, malware & ransomware removal</div>
+            <div class="service-bullet">Operating system reinstallation (Windows, macOS, Linux)</div>
+            <div class="service-bullet">Data recovery from failed drives</div>
+            <div class="service-bullet">Screen, keyboard & battery replacement (laptops)</div>
+            <div class="service-bullet">Performance optimisation & cleanup</div>
+            <div class="service-bullet">Preventive maintenance contracts (monthly/quarterly)</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Book a Repair →</a>
+        </div>
+        <div>
+          <div class="service-visual">
+            <div class="service-big-icon">🔧</div>
+            <h3>Fast Turnaround</h3>
+            <p>Most repairs completed within <strong style="color:var(--cyan);">24–48 hours</strong>. Same-day service available for urgent cases.</p>
+          </div>
+          <div class="process-steps" style="margin-top:32px;">
+            <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Drop Off or Call</h4><p>Bring your device in or call us for a remote/on-site visit.</p></div></div>
+            <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Free Diagnosis</h4><p>We assess the problem and give you a clear, upfront quote.</p></div></div>
+            <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Repair & Test</h4><p>We fix the issue and thoroughly test before returning it.</p></div></div>
+            <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>30-Day Warranty</h4><p>All repairs covered by our satisfaction guarantee.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="tab-pane" id="software" role="tabpanel">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <div class="badge">Service 02</div>
+          <h2>Software <span style="color:var(--cyan);">Development</span></h2>
+          <p>Off-the-shelf software rarely fits your business perfectly. We build custom software solutions — from simple web forms to complex ERP systems — designed around exactly how your team works.</p>
+          <p>We use modern, scalable technologies and follow agile development practices so you always know where your project stands.</p>
+          <div class="service-bullets">
+            <div class="service-bullet">Custom web applications (React, Vue, Node.js)</div>
+            <div class="service-bullet">Business process automation tools</div>
+            <div class="service-bullet">ERP & CRM system integration (Odoo, Salesforce, SAP)</div>
+            <div class="service-bullet">Inventory & POS systems</div>
+            <div class="service-bullet">API development & third-party integrations</div>
+            <div class="service-bullet">Desktop applications (Windows/macOS)</div>
+            <div class="service-bullet">Ongoing maintenance & support contracts</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Discuss Your Project →</a>
+        </div>
+        <div>
+          <div class="service-visual">
+            <div class="service-big-icon">💻</div>
+            <h3>Agile Development</h3>
+            <p>2-week sprints, regular demos, and full source code ownership. <strong style="color:var(--cyan);">Your software, your IP.</strong></p>
+          </div>
+          <div class="process-steps" style="margin-top:32px;">
+            <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Requirements Workshop</h4><p>We map out your needs, users, and workflows in detail.</p></div></div>
+            <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Design & Prototype</h4><p>UI/UX wireframes reviewed and approved before coding begins.</p></div></div>
+            <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Development & Testing</h4><p>Iterative build with regular demos and feedback cycles.</p></div></div>
+            <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Launch & Training</h4><p>Deployment, team training, and ongoing support included.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NETWORK -->
+    <div class="tab-pane" id="network" role="tabpanel">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <div class="badge">Service 03</div>
+          <h2>Network Setup <span style="color:var(--cyan);">& Security</span></h2>
+          <p>A poorly designed network is a liability — slow speeds, dead zones, and security holes that put your business at risk. We design, install, and secure business networks built for reliability and performance.</p>
+          <div class="service-bullets">
+            <div class="service-bullet">Office LAN/WAN design and structured cabling</div>
+            <div class="service-bullet">Enterprise Wi-Fi (Ubiquiti, Cisco Meraki)</div>
+            <div class="service-bullet">Firewall setup and configuration (Fortinet, pfSense)</div>
+            <div class="service-bullet">VPN setup for remote teams</div>
+            <div class="service-bullet">Network segmentation & VLAN configuration</div>
+            <div class="service-bullet">24/7 network monitoring</div>
+            <div class="service-bullet">Penetration testing & security audits</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Request a Network Audit →</a>
+        </div>
+        <div>
+          <div class="service-visual">
+            <div class="service-big-icon">🌐</div>
+            <h3>Security-First Design</h3>
+            <p>Every network we build follows <strong style="color:var(--cyan);">zero-trust principles</strong> — because threats can come from inside too.</p>
+          </div>
+          <div class="process-steps" style="margin-top:32px;">
+            <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Site Survey</h4><p>We assess your space, devices, and current infrastructure.</p></div></div>
+            <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Custom Network Plan</h4><p>Detailed design with equipment list and security policy.</p></div></div>
+            <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Installation</h4><p>Minimal disruption installation, typically over a weekend.</p></div></div>
+            <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Monitoring & Maintenance</h4><p>Ongoing monitoring with proactive alerts and updates.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOUD -->
+    <div class="tab-pane" id="cloud" role="tabpanel">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <div class="badge">Service 04</div>
+          <h2>Cloud Services <span style="color:var(--cyan);">& Backup</span></h2>
+          <p>The cloud isn't just for large enterprises — it's one of the best investments a small or medium business can make. We help you choose the right platform, migrate your data safely, and ensure nothing critical is ever lost.</p>
+          <div class="service-bullets">
+            <div class="service-bullet">Microsoft 365 setup, migration & management</div>
+            <div class="service-bullet">Google Workspace deployment</div>
+            <div class="service-bullet">AWS & Microsoft Azure cloud infrastructure</div>
+            <div class="service-bullet">Automated daily cloud backup (Veeam, Acronis)</div>
+            <div class="service-bullet">Disaster recovery planning & testing</div>
+            <div class="service-bullet">Cloud cost optimisation</div>
+            <div class="service-bullet">Hybrid cloud solutions for on-premise + cloud</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Plan Your Cloud Migration →</a>
+        </div>
+        <div>
+          <div class="service-visual">
+            <div class="service-big-icon">☁️</div>
+            <h3>Zero Data Loss Guarantee</h3>
+            <p>With automated backups running <strong style="color:var(--cyan);">every 6 hours</strong>, your business can recover from any disaster.</p>
+          </div>
+          <div class="process-steps" style="margin-top:32px;">
+            <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Cloud Readiness Assessment</h4><p>We evaluate your current setup and recommend the best platform.</p></div></div>
+            <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Migration Planning</h4><p>Zero-downtime migration strategy, scheduled around your operations.</p></div></div>
+            <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Migration & Configuration</h4><p>Data and application migration with full testing at each stage.</p></div></div>
+            <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Training & Handover</h4><p>Staff training and full documentation of your new cloud environment.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSULTING -->
+    <div class="tab-pane" id="consulting" role="tabpanel">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <div class="badge">Service 05</div>
+          <h2>IT <span style="color:var(--cyan);">Consulting</span></h2>
+          <p>Technology decisions made without strategy can cost far more than they save. Our consultants bring deep expertise to help you invest in the right technology at the right time — aligned with your business goals.</p>
+          <div class="service-bullets">
+            <div class="service-bullet">IT strategy & digital transformation roadmaps</div>
+            <div class="service-bullet">Full IT infrastructure audits</div>
+            <div class="service-bullet">Technology vendor selection & procurement</div>
+            <div class="service-bullet">IT budgeting & cost analysis</div>
+            <div class="service-bullet">Cybersecurity risk assessments</div>
+            <div class="service-bullet">GDPR & compliance consulting</div>
+            <div class="service-bullet">Virtual CTO / fractional IT management</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Book a Strategy Session →</a>
+        </div>
+        <div>
+          <div class="service-visual">
+            <div class="service-big-icon">📊</div>
+            <h3>Strategic Thinking</h3>
+            <p>We act as your <strong style="color:var(--cyan);">trusted technology advisor</strong> — not just a vendor, but a long-term partner in your growth.</p>
+          </div>
+          <div class="process-steps" style="margin-top:32px;">
+            <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Discovery Session</h4><p>We learn your business, goals, pain points, and current IT state.</p></div></div>
+            <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>IT Audit</h4><p>Comprehensive review of systems, security, processes, and costs.</p></div></div>
+            <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Strategic Recommendations</h4><p>Clear, prioritised roadmap with timelines and investment estimates.</p></div></div>
+            <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Implementation Support</h4><p>We can manage execution or hand off to your internal team — your choice.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>Not Sure Which Service You Need?</h2>
+    <p>Talk to us — we'll assess your situation and recommend exactly the right solution, no upselling.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn" style="background:white;color:var(--navy);font-weight:700;">Get a Free Assessment</a>
+      <a href="pricing.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:white;">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="logo-text">IT<span>Support</span>.mk</div></a><p>Your trusted technology partner in Macedonia since 2015.</p><div class="socials"><a href="#" class="social-btn" aria-label="Facebook">f</a><a href="#" class="social-btn" aria-label="LinkedIn">in</a></div></div><div class="footer-col"><h4>Services</h4><ul><li><a href="#repair">Computer Repair</a></li><li><a href="#software">Software Development</a></li><li><a href="#network">Network & Security</a></li><li><a href="#cloud">Cloud Services</a></li><li><a href="#consulting">IT Consulting</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col footer-contact"><h4>Contact</h4><div class="fc-item"><span class="fc-icon">📞</span><span class="fc-text"><a href="tel:+38971000000">+389 71 000 000</a></span></div><div class="fc-item"><span class="fc-icon">✉️</span><span class="fc-text"><a href="mailto:info@itsupport.mk">info@itsupport.mk</a></span></div></div></div><div class="footer-bottom"><p>© 2025 IT Support MK. All rights reserved.</p></div></div></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="script.js">
+</script>
+<script>
+  // Auto-activate tab from URL hash
+  const hash = location.hash.replace('#','');
+  if(hash){
+    const btn = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
+    if(btn) btn.click();
+  }
+</script>
+</body>
+</html>
